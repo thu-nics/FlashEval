@@ -1,0 +1,13 @@
+load_dir: 'Image_score/COCO'
+set_name: 'COCO'
+save_dir: 'Image_score'
+benchmark: 'ImageReward, HPS, Aesthetic, CLIP'
+use_pretrain: True #whether use the processed data  
+# full precision model
+model_names: 'dreamlike-photoreal, small-stablediffusion, stablediffusion1.2, stablediffusion1.4, stablediffusion1.5, stablediffusion2.1'
+solver_names: 'DDIM10, DDIM20, DDIM50, PNDM10, PNDM20, PNDM50, DPM10, DPM20'
+enames: 'fp'
+# quant models
+q_model_names: 'stablediffusion1.2, stablediffusion1.4, stablediffusion1.5'
+q_solver_names: 'DDIM10, DDIM20, DDIM50, DPM10, DPM20'
+q_enames: '_6, _8'

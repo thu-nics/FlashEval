@@ -1,0 +1,11 @@
+prompts_path: 'data/COCO_40504.json'
+img_dir: 'generated_images/COCO/'
+result_dir: 'Image_score/COCO'
+model_names: 'dreamlike-photoreal, small-stablediffusion, stablediffusion1.2, stablediffusion1.4, stablediffusion1.5, stablediffusion2.1'
+solver_names: 'DDIM10, DDIM20, DDIM50, PNDM10, PNDM20, PNDM50, DPM10, DPM20'
+# fp:full precision model; _6:6-bit quant; _8:8-bit quant
+enames: 'fp'
+# enames: '_6, _8'
+gpu_id: '0'
+benchmark: 'ImageReward, HPS, Aesthetic, CLIP'
+

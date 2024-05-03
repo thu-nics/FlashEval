@@ -1,0 +1,17 @@
+mode: 'random'
+set_name: 'COCO'
+load_root: 'Image_score'
+benchmark: 'HPS'
+gpu_id: '0'
+source_path: 'data/COCO_40504.json'
+save_dir: 'result/'
+#
+range: 40504
+item: 50
+iter_range: 11
+per_iter: 1000000
+n: 3000000
+frequencys: '30000, 20000, 15000, 12000, 10000, 8000, 5000, 3000, 1000, 500, 100'
+top_k: 100000
+
+
