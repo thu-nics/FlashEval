@@ -10,7 +10,7 @@ This repository is the official implementation of the paper:
 [*Guohao Dai*](),
 [*Huazhong Yang*](),
 [*Yu Wang*]()
-CVPR, 2024. [**[Project Page]**](https://telling-left-from-right.github.io) [**[Paper]**](https://arxiv.org/abs/2403.16379)
+CVPR, 2024. [**[Project Page]**]() [**[Paper]**](https://arxiv.org/abs/2403.16379)
 
 ## Usage
 
@@ -75,7 +75,7 @@ python search_algorithm.py --config configs/search.yaml
 Note: Since constructing random subsets involves randomness, the results may vary each time the process is run. As iteration increases, the effect gets better.
 
 ## Condensed subset
-coming soon
+coming in a week
 
 ## Citation
 If you find our work useful, please cite:
