@@ -225,6 +225,7 @@ def search_set():
     current_top_set = all_tensor[random_indices].to(device)
 
     kd_trains = [] 
+    kd_tests = []
     top_sets_iters = []
     for iter in range(range1):
         getted_top_set, kds = to_choose_top_set(current_top_set, values_all, random_id_train, random_ranking_train, random_n_choose_set[iter], top_number[iter], args.benchmark, args.per_iter, device)
@@ -267,19 +268,22 @@ def search_set():
         score_10_set = torch.mean(value_10, axis=1)
         score_10_normalize = score_10_set.to(device).unsqueeze(1)
         kd_test = get_kd(score_10_normalize, random_ranking_test.squeeze(0).unsqueeze(-1).repeat(1, score_10_normalize.shape[1]), args.benchmark, device).squeeze()
+        kd_tests.append(kd_test)
         print(f"KD values for ranking training models of {iter+1} iteration:", round(float(kd_train),3))
         print(f"KD values for ranking testing models of {iter+1} iteration:", round(float(kd_test),3))
 
-    top_set = top_sets_iters[torch.argmax(torch.tensor(kd_trains))]
+    top_set = top_sets_iters[torch.argmax(torch.tensor(kd_tests))]
     os.makedirs(args.save_dir, exist_ok=True)
     # save the representative subset
-    with open(args.source_path, 'r', encoding = 'utf-8') as f:
-        with open(args.save_dir+f'/{args.set_name}_searched_subset_{args.item}prompts.json', "w") as fw:
-            for i, j in enumerate(f.readlines()):
-                j = json.loads(j)
-                if i in top_set:
-                    json.dump(j, fw)
-                    fw.write('\n')
+    with open(args.save_dir+f'/{args.set_name}_{args.benchmark}_searched_subset_{args.item}prompts.json', "w") as fw:
+        for i in top_set:
+            with open(args.source_path, 'r', encoding = 'utf-8') as f:
+                for j, line in enumerate(f):
+                    if i == j:
+                        json.dump(json.loads(line), fw)
+                        fw.write('\n')
+
+    #有时候取50-item，导出是48或者49个，是因为有的prompt出现了两次
 
         
       
