@@ -22,7 +22,7 @@ CVPR, 2024. [**[Project Page]**]() [**[Paper]**](https://arxiv.org/abs/2403.1637
 
 
 ## Condensed subset
-We first provide condensed subsets of different sizes of COCO and diffusionDB for users to use directly.
+We first provide condensed subsets of different sizes of [*COCO*](https://cocodataset.org/#home) and [*diffusionDB*](https://poloclub.github.io/diffusiondb/) datasets for users to use directly.
 
 Representative subsets for COCO: [COCO](representative_subset/COCO)
 
