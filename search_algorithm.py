@@ -168,7 +168,7 @@ def search_set():
     )
     parser.add_argument(
         "--save_dir",
-        default='result/',    
+        default='100item-result/',    
         type=str
     )     
 
@@ -212,11 +212,14 @@ def search_set():
     range1 = args.iter_range
 
     n = args.n
-    random_n_choose_prompt = [n,n,n,n,n,n,n,n,n,n,n,n,n]
-    random_n_choose_set = [n,n,n,n,n,n,n,n,n,n,n,n,n]       
     top_k = args.top_k
-    top_number = [top_k,top_k,top_k,top_k,top_k,top_k,top_k,top_k,top_k,top_k,top_k,top_k]
-
+    random_n_choose_prompt = []
+    random_n_choose_set = []      
+    top_number = []
+    for i in range (args.iter_range):
+        random_n_choose_prompt.append(n)
+        random_n_choose_set.append(n)
+        top_number.append(top_k)
 
     all_tensor = torch.arange(0,args.range).to(device)
 

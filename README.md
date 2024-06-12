@@ -14,11 +14,21 @@ CVPR, 2024. [**[Project Page]**]() [**[Paper]**](https://arxiv.org/abs/2403.1637
 
 ## Usage
 
-1. [Setup](#setup)
-2. [One-time generation](#one-time-generation)
-3. [Preprocessing](#preprocessing)
-4. [Search algorithm](#search-algorithm)
-5. [Condensed subset](#condensed-subset)
+1. [Condensed subset](#condensed-subset)
+2. [Setup](#setup)
+3. [One-time generation](#one-time-generation)
+4. [Preprocessing](#preprocessing)
+5. [Search algorithm](#search-algorithm)
+
+
+## Condensed subset
+We first provide condensed subsets of different sizes of COCO and diffusionDB for users to use directly.
+
+Representative subsets for COCO: [COCO](representative_subset/COCO)
+
+Representative subsets for diffusionDB: [diffusionDB](representative_subset/diffusionDB)
+
+Besides, if you want to use the FlashEval algorithm to search for subsets by yourself, run the following steps:
 
 ## Setup
 
@@ -74,8 +84,9 @@ python search_algorithm.py --config configs/search.yaml
 ```
 Note: Since constructing random subsets involves randomness, the results may vary each time the process is run. As iteration increases, the effect gets better.
 
-## Condensed subset
-coming in a week
+
+## Contact
+If you have any questions, please contact lllzz0309zz@gmail.com.
 
 ## Citation
 If you find our work useful, please cite:
