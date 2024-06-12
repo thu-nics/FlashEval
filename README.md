@@ -24,9 +24,9 @@ CVPR, 2024. [**[Project Page]**]() [**[Paper]**](https://arxiv.org/abs/2403.1637
 ## Condensed subset
 We first provide condensed subsets of different sizes of [*COCO*](https://cocodataset.org/#home) and [*diffusionDB*](https://poloclub.github.io/diffusiondb/) datasets for users to use directly.
 
-Representative subsets for COCO: [COCO](representative_subset/COCO)
+Representative subsets for COCO: [subsets for COCO](representative_subset/COCO)
 
-Representative subsets for diffusionDB: [diffusionDB](representative_subset/diffusionDB)
+Representative subsets for diffusionDB: [subsets for diffusionDB](representative_subset/diffusionDB)
 
 Besides, if you want to use the FlashEval algorithm to search for subsets by yourself, run the following steps:
 
