@@ -10,23 +10,25 @@ This repository is the official implementation of the paper:
 [*Guohao Dai*](),
 [*Huazhong Yang*](),
 [*Yu Wang*]()
-CVPR, 2024. [**[Project Page]**]() [**[Paper]**](https://arxiv.org/abs/2403.16379)
+CVPR, 2024. [**[Project Page]**](https://a-suozhang.xyz/flasheval.github.io/) [**[Paper]**](https://arxiv.org/abs/2403.16379)
 
 ## Usage
 
-1. [Condensed subset](#condensed-subset)
+1. [Representative subsets](#representative-subsets)
 2. [Setup](#setup)
 3. [One-time generation](#one-time-generation)
 4. [Preprocessing](#preprocessing)
 5. [Search algorithm](#search-algorithm)
 
 
-## Condensed subset
-We first provide condensed subsets of different sizes of [*COCO*](https://cocodataset.org/#home) and [*diffusionDB*](https://poloclub.github.io/diffusiondb/) datasets for users to use directly.
+## Representative subsets
+We first provide representative subsets of different sizes of [*COCO*](https://cocodataset.org/#home) and [*diffusionDB*](https://poloclub.github.io/diffusiondb/) datasets for users to use directly. 
 
-Representative subsets for COCO: [subsets for COCO](representative_subset/COCO)
+🔥Representative subsets for COCO: [subsets for COCO](representative_subset/COCO)
 
-Representative subsets for diffusionDB: [subsets for diffusionDB](representative_subset/diffusionDB)
+🔥Representative subsets for diffusionDB: [subsets for diffusionDB](representative_subset/diffusionDB)
+
+🔥The representative subsets are also available on Huggingface🤗: [subsets in Huggingface](https://huggingface.co/resoLve111/flasheval/tree/main)
 
 Besides, if you want to use the FlashEval algorithm to search for subsets by yourself, run the following steps:
 
